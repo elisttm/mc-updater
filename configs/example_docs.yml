@@ -1,0 +1,51 @@
+# this is to be used as a reference when filling out a yaml config of your own manually
+# please do not try and use this as the actual config file
+
+# current minecraft version
+mc_version: 1.19.4
+
+# list of valid loaders (ie. fabric, forge, paper, bukkit) mainly used for modrinth and github
+loaders:
+- paper
+- spigot
+- bukkit
+
+# this is the actual list of plugins/mods to download
+assets:
+  AssetName:        # name of asset, only used here so it doesnt need to be semantic
+    source: source  # platform to download from (see below for valid sources)
+    id: id          # source-specific identifier
+
+  # below is a list of all valid sources and how they are structured
+
+  # github.com
+  GithubAsset:
+    source: github
+    id: repo-author/repo-name
+  
+  # modrinth.com 
+  ModrinthAsset:
+    source: modrinth
+    id: id-from-url # modrinth.com/plugin/[asset-id]
+  
+  # spigotmc.org
+  SpigotAsset:
+    source: spigot
+    id: 123456 # spigotmc.org/resources/asset-name.[123456] 
+
+  # curseforge.com / dev.bukkit.org
+  CurseforgeAsset:
+    source: curse
+    id: asset-id # curseforge.com/minecraft/.../[asset-id]
+
+  # ex. static url that redirects to latest version
+  PermalinkedAsset:
+    source: permalink
+    id: example.com/latest/asset.jar
+  
+  # must be downloaded via a webpage
+  ManualAsset:
+    source: manual
+    id: example.com/downloads
+
+  # for best results, i highly reccomend using modrinth over everything else as much as possible

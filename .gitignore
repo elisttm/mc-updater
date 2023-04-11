@@ -1,0 +1,7 @@
+__pycache__/
+
+configs/*
+!configs/example*
+!configs/config.yml
+
+STORAGE

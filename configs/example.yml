@@ -1,0 +1,25 @@
+# here is a working implimentation of an asset list that u can run and test
+mc_version: 1.19.4
+loaders:
+  - paper
+  - spigot
+  - bukkit
+assets:
+  CoreProtect:
+    source: modrinth
+    id: coreprotect
+  ImageOnMap:
+    source: github
+    id: okocraft/ImageOnMap
+  ViaVersion: # hosted externally, linked via spigot
+    source: spigot
+    id: 19254
+  ViaBackwards: # hosted on spigot
+    source: spigot
+    id: 27448
+  Vault:
+    source: curse
+    id: vault
+  Luckperms:
+    source: manual
+    id: luckperms.net
